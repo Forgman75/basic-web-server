@@ -1,0 +1,63 @@
+:root { --sidebar-width: 245px; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #212529; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+.app-shell { min-height: 100vh; display: flex; }
+.sidebar { width: var(--sidebar-width); min-width: var(--sidebar-width); min-height: 100vh; padding: 15px 14px 10px; background: #212529; color: #fff; }
+.brand { display: flex; align-items: center; gap: 9px; color: #fff; text-decoration: none; font-size: 21px; padding-bottom: 14px; }
+.brand-mark { display: inline-flex; width: 32px; height: 32px; justify-content: center; align-items: center; border-radius: 7px; background: #fff; color: #212529; font-weight: 800; font-size: 24px; }
+.sidebar-rule { border-color: #687078; margin: 0 0 14px; }
+.sidebar .nav-link { color: #f8f9fa; border-radius: 6px; padding: 8px 12px; font-size: 14px; }
+.sidebar .nav-link i { margin-right: 7px; }
+.sidebar .nav-link.active { background: #3269e8; }
+.sidebar-bottom { margin-top: auto; }
+.profile-menu { width: 140px; margin-bottom: 3px; border-radius: 6px; overflow: hidden; background: #343a40; }
+.profile-action { display: block; color: #dee2e6; text-decoration: none; padding: 10px 14px; font-size: 14px; border-bottom: 1px solid #454d55; }
+.profile-action:last-child { border-bottom: 0; }
+.user-row { border-top: 1px solid #596168; display: flex; align-items: center; gap: 7px; padding-top: 10px; font-size: 13px; font-weight: 600; }
+.avatar { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; }
+.main-content { flex: 1; min-width: 0; background: #fff; }
+.home-page { padding: 92px 35px 60px; }
+.page-intro h1, .catalog-title, .contacts-title, .placeholder-page h1 { font-size: 42px; font-weight: 400; margin-bottom: 8px; }
+.page-intro .lead { font-size: 17px; }
+.pricing-row { margin-top: 40px; }
+.pricing-card { max-width: 255px; margin: 0 auto; border-color: #d5d5d5; box-shadow: 0 2px 4px rgba(0,0,0,.08); }
+.pricing-card .card-header { background: #f7f7f7; font-size: 20px; padding: 12px; }
+.pricing-card .card-body { padding: 12px 14px 15px; }
+.price { font-size: 32px; font-weight: 600; margin-bottom: 10px; }
+.products-grid { --bs-gutter-x: 1.5rem; --bs-gutter-y: 3.5rem; }
+.pricing-card .card-text { font-size: 14px; line-height: 1.5; }
+.caret { font-size: 10px; }
+.content { min-width: 0; }
+.category-container { max-width: 1120px; padding: 78px 28px 60px; }
+.category-container h1 {
+  margin: 0 0 88px; font-size: 42px; line-height: 1.2; font-weight: 400;
+}
+.catalog-page { max-width: 940px; padding-top: 78px; padding-bottom: 50px; }
+.catalog-title { margin-bottom: 48px; }
+.catalog-grid { row-gap: 48px !important; }
+.catalog-card { box-shadow: 0 3px 8px rgba(0,0,0,.12); }
+.thumbnail { height: 197px; background: #555a5e; color: #f8f9fa; display: flex; justify-content: center; align-items: center; }
+.catalog-card .card-body { padding: 14px; }
+.catalog-card .card-text { font-size: 14px; line-height: 1.5; }
+.contacts-page { max-width: 930px; padding-top: 100px; padding-bottom: 60px; }
+.contacts-title { margin-bottom: 58px; }
+.contacts-layout { align-items: flex-start; }
+.contact-form { padding: 14px; border-color: #d5d5d5; box-shadow: 0 2px 3px rgba(0,0,0,.04); }
+.contact-form .form-label { font-size: 14px; margin-bottom: 6px; }
+.contact-form textarea { resize: vertical; }
+.contact-copy h2 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+.contact-copy p { font-size: 14px; line-height: 1.5; margin-bottom: 14px; }
+.placeholder-page { padding-top: 90px; }
+@media (max-width: 767.98px) {
+  .app-shell { display: block; }
+  .sidebar { width: 100%; min-width: 0; min-height: auto; padding: 10px 12px; }
+  .sidebar .nav { flex-direction: row !important; flex-wrap: wrap; }
+  .sidebar .nav-link { padding: 7px 9px; }
+  .sidebar-bottom { display: none; }
+  .home-page, .catalog-page, .contacts-page { padding: 42px 18px; }
+  .page-intro h1, .catalog-title, .contacts-title { font-size: 34px; }
+  .pricing-row { margin-top: 28px; }
+  .catalog-title, .contacts-title { margin-bottom: 32px; }
+  .category-container { padding: 42px 18px; }
+  .category-container h1 { margin-bottom: 42px; font-size: 34px; }
+}
