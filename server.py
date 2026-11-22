@@ -7,7 +7,9 @@ hostName = "localhost" # Адрес для доступа по сети
 serverPort = 8080 # Порт для доступа по сети
 
 # Путь к HTML-файлу
-HTML_FILE = Path(__file__).parent / "html" / "index.html"
+HTML_DIR = Path(__file__).parent / "html"
+# Путь к CSS-файлу
+CSS_DIR = Path(__file__).parent / "css"
 
 class MyServer(BaseHTTPRequestHandler):
     """ 
@@ -16,12 +18,24 @@ class MyServer(BaseHTTPRequestHandler):
     """
     def do_GET(self):
         """ Метод для обработки входящих GET-запросов """
+        # Определяем запрашиваемый файл
+        if self.path == "/":
+            file_path = HTML_DIR / "index.html"
+            content_type = "text/html; charset=utf-8"
+        elif self.path == "/styles.css":
+            file_path = CSS_DIR / "styles.css"
+            content_type = "text/css; charset=utf-8"
+
+        else:
+            self.send_error(404, "File not found")
+            return
+      
         # Открываем HTML-файл
-        with open(HTML_FILE, "rb") as file:
+        with open(file_path, "rb") as file:
             html = file.read()
 
         self.send_response(200) # Отправка кода ответа
-        self.send_header("Content-type", "text/html; charset=utf-8") # Отправка типа данных, который будет передаваться
+        self.send_header("Content-type", content_type) # Отправка типа данных, который будет передаваться
         self.end_headers() # Завершение формирования заголовков ответа
         self.wfile.write(html) # Тело ответа
 
