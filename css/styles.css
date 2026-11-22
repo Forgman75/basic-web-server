@@ -24,7 +24,14 @@ body { margin: 0; color: #212529; font-family: system-ui, -apple-system, "Segoe 
 .pricing-card .card-header { background: #f7f7f7; font-size: 20px; padding: 12px; }
 .pricing-card .card-body { padding: 12px 14px 15px; }
 .price { font-size: 32px; font-weight: 600; margin-bottom: 10px; }
+.products-grid { --bs-gutter-x: 1.5rem; --bs-gutter-y: 3.5rem; }
 .pricing-card .card-text { font-size: 14px; line-height: 1.5; }
+.caret { font-size: 10px; }
+.content { min-width: 0; }
+.category-container { max-width: 1120px; padding: 78px 28px 60px; }
+.category-container h1 {
+  margin: 0 0 88px; font-size: 42px; line-height: 1.2; font-weight: 400;
+}
 .catalog-page { max-width: 940px; padding-top: 78px; padding-bottom: 50px; }
 .catalog-title { margin-bottom: 48px; }
 .catalog-grid { row-gap: 48px !important; }
@@ -51,4 +58,6 @@ body { margin: 0; color: #212529; font-family: system-ui, -apple-system, "Segoe 
   .page-intro h1, .catalog-title, .contacts-title { font-size: 34px; }
   .pricing-row { margin-top: 28px; }
   .catalog-title, .contacts-title { margin-bottom: 32px; }
+  .category-container { padding: 42px 18px; }
+  .category-container h1 { margin-bottom: 42px; font-size: 34px; }
 }
