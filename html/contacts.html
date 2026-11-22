@@ -26,7 +26,13 @@
       </div>
       <div class="user-row">
         <img src="https://placehold.co/32x32" alt="" class="avatar">
-        <span>Пользователь</span><i class="bi bi-caret-down-fill small"></i>
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Пользователь</button>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
       </div>
     </div>
   </aside>
@@ -36,7 +42,7 @@
       <h1 class="text-center contacts-title">Контакты</h1>
       <div class="row justify-content-center g-5 contacts-layout">
         <div class="col-12 col-lg-5">
-          <form class="card contact-form" action="#" method="post">
+          <form class="card contact-form" action="/submit" method="post">
             <div class="mb-3">
               <label for="name" class="form-label">Имя</label>
               <input type="text" class="form-control" id="name" name="name">
